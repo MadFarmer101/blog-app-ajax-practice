@@ -2,8 +2,8 @@ import React, { Component } from "react";
 // import axios from "../../axios";
 import "./Blog.css";
 import Posts from "../Blog/Posts/Posts";
-import { Route, Link } from "react-router-dom";
-import NewPost from "../Blog/NewPost/NewPost";
+import { Route, NavLink } from "react-router-dom"
+import NewPost from "../Blog/NewPost/NewPost"
 
 class Blog extends Component {
   render() {
@@ -13,16 +13,16 @@ class Blog extends Component {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink to="/" exact>Home</NavLink>
               </li>
               <li>
-                <Link to="/new-post">New Post</Link>
+                <NavLink to="/new-post" exact>New Post</NavLink>
               </li>
             </ul>
           </nav>
         </header>
-        <Route path="/" exact component={Posts} />
-        <Route path="/new-post" component={NewPost} />
+        <Route path="/" exact component={Posts}/>
+        <Route path="/new-post" component={NewPost}/>
       </div>
     );
   }

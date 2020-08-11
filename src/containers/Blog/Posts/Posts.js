@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Post from "../../../components/Post/Post";
-import axios from "../../../axios"
-import "./Posts.css"
+import axios from "../../../axios";
+import "./Posts.css";
+import { Link } from "react-router-dom";
 
 class Posts extends Component {
   state = {
@@ -22,7 +23,7 @@ class Posts extends Component {
         this.setState({ posts: updatedPosts });
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
         // this.setState({ error: true });
       });
   }
@@ -36,12 +37,13 @@ class Posts extends Component {
     if (!this.state.error) {
       posts = this.state.posts.map((post) => {
         return (
-          <Post
-            key={post.id}
-            title={post.title}
-            author={post.author}
-            clicked={() => this.selectedPostHandler(post.id)}
-          />
+          <Link to={"/" + post.id} key={post.id}>
+            <Post
+              title={post.title}
+              author={post.author}
+              clicked={() => this.selectedPostHandler(post.id)}
+            />
+          </Link>
         );
       });
     }

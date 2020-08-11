@@ -2,6 +2,8 @@ import React, { Component } from "react";
 // import axios from "../../axios";
 import "./Blog.css";
 import Posts from "../Blog/Posts/Posts";
+import { Route } from "react-router-dom"
+import NewPost from "../Blog/NewPost/NewPost"
 
 class Blog extends Component {
   render() {
@@ -19,7 +21,8 @@ class Blog extends Component {
             </ul>
           </nav>
         </header>
-        <Posts />
+        <Route path="/" exact render={() => <Posts />}/>
+        <Route path="/new-post" exact render={() => <NewPost />}/>
       </div>
     );
   }

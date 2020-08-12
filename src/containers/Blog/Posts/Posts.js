@@ -29,7 +29,7 @@ class Posts extends Component {
   }
 
   selectedPostHandler = (id) => {
-    this.props.history.push("posts/" + id);
+    this.props.history.push("/posts/" + id);
   };
 
   render() {

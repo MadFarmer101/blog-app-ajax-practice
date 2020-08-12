@@ -12,7 +12,7 @@ class Blog extends Component {
           <nav>
             <ul>
               <li>
-                <NavLink to="/posts" exact>
+                <NavLink to="/posts/" exact>
                   Posts
                 </NavLink>
               </li>

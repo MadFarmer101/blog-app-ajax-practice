@@ -17,7 +17,7 @@ class NewPost extends Component {
       author: this.state.author,
     };
     axios.post("/", post).then((response) => console.log(response));
-    this.props.history.push("/posts");
+    this.props.history.replace("/posts");
   };
 
   render() {

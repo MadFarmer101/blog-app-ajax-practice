@@ -12,7 +12,7 @@ class Blog extends Component {
           <nav>
             <ul>
               <li>
-                <NavLink to="/" exact>
+                <NavLink to="/posts" exact>
                   Posts
                 </NavLink>
               </li>
@@ -26,7 +26,7 @@ class Blog extends Component {
         </header>
         <Switch>
           <Route path="/new-post" component={NewPost} />
-          <Route path="/" component={Posts} />
+          <Route path="/posts" component={Posts} />
         </Switch>
       </div>
     );

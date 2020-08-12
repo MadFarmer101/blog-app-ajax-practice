@@ -33,7 +33,8 @@ class Blog extends Component {
             <Route path="/new-post" component={NewPost} />
           ) : null}
           <Route path="/posts" component={Posts} />
-          <Redirect from="/" to="/posts" />
+          <Route render={() => <h2>You have to log in to create a new post!</h2>} />
+          {/* <Redirect from="/" to="/posts" /> */}
         </Switch>
       </div>
     );
